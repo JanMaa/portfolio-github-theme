@@ -6,6 +6,9 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { BarChart, Mail, Book, Code, Award, Menu, X, Database, Brain, Eye, Terminal, PieChart, Linkedin, Github, BarChart2, BookOpen, ChevronLeft, ChevronRight, LineChart, Zap, Layers, ShoppingCart, PieChart as PieChartIcon } from "lucide-react"
+import imgAvatar from '@/assets/avatar-sample.png'
+import imgDashboard from '@/assets/dashboard-sample.png'
+import imgCertificate from '@/assets/certificate-sample.png'
 
 export default function GitHubInspiredPortfolio() {
 const [activeSection, setActiveSection] = useState('about')
@@ -47,65 +50,65 @@ const projects = [
     title: "Customer Churn Prediction",
     description: "Developed a machine learning model to predict customer churn with 85% accuracy.",
     icon: <BarChart className="w-5 h-5" />,
-    image: "/placeholder.svg?height=200&width=400"
+    image: imgDashboard
   },
   {
     title: "Sales Trend Analysis",
     description: "Analyzed 5 years of sales data to identify key trends and opportunities for growth.",
     icon: <LineChart className="w-5 h-5" />,
-    image: "/placeholder.svg?height=200&width=400"
+    image: imgDashboard
   },
   {
     title: "Sentiment Analysis Dashboard",
     description: "Created an interactive dashboard for real-time sentiment analysis of customer feedback.",
     icon: <PieChartIcon className="w-5 h-5" />,
-    image: "/placeholder.svg?height=200&width=400"
+    image: imgDashboard
   },
   {
     title: "Supply Chain Optimization",
     description: "Implemented a machine learning model to optimize inventory management and reduce costs.",
     icon: <Layers className="w-5 h-5" />,
-    image: "/placeholder.svg?height=200&width=400"
+    image: imgDashboard
   },
   {
     title: "Predictive Maintenance System",
     description: "Developed an IoT-based system for predicting equipment failures in manufacturing plants.",
     icon: <Zap className="w-5 h-5" />,
-    image: "/placeholder.svg?height=200&width=400"
+    image: imgDashboard
   },
   {
     title: "Customer Segmentation Analysis",
     description: "Utilized clustering algorithms to segment customers and tailor marketing strategies.",
     icon: <PieChart className="w-5 h-5" />,
-    image: "/placeholder.svg?height=200&width=400"
+    image: imgDashboard
   },
   {
     title: "Fraud Detection Algorithm",
     description: "Created a real-time fraud detection system for a fintech company using anomaly detection techniques.",
     icon: <Eye className="w-5 h-5" />,
-    image: "/placeholder.svg?height=200&width=400"
+    image: imgDashboard
   },
   {
     title: "Market Basket Analysis",
     description: "Implemented association rule mining to analyze customer purchase patterns and improve product placement.",
     icon: <ShoppingCart className="w-5 h-5" />,
-    image: "/placeholder.svg?height=200&width=400"
+    image: imgDashboard
   }
 ]
 
 const certificates = [
-  { name: "Google Data Analytics Professional Certificate", image: "/placeholder.svg?height=100&width=200" },
-  { name: "IBM Data Science Professional Certificate", image: "/placeholder.svg?height=100&width=200" },
-  { name: "Microsoft Certified: Azure Data Scientist Associate", image: "/placeholder.svg?height=100&width=200" },
-  { name: "Tableau Desktop Specialist", image: "/placeholder.svg?height=100&width=200" },
-  { name: "AWS Certified Data Analytics - Specialty", image: "/placeholder.svg?height=100&width=200" },
-  { name: "Certified Analytics Professional (CAP)", image: "/placeholder.svg?height=100&width=200" },
-  { name: "SAS Certified Data Scientist", image: "/placeholder.svg?height=100&width=200" },
-  { name: "Cloudera Certified Associate Data Analyst", image: "/placeholder.svg?height=100&width=200" },
-  { name: "Data Science Council of America (DASCA) Associate Big Data Analyst", image: "/placeholder.svg?height=100&width=200" },
-  { name: "MongoDB Certified Data Analyst Associate", image: "/placeholder.svg?height=100&width=200" },
-  { name: "Alteryx Designer Core Certification", image: "/placeholder.svg?height=100&width=200" },
-  { name: "IABAC Certified Business Analytics Professional", image: "/placeholder.svg?height=100&width=200" }
+  { name: "Google Data Analytics Professional Certificate", image: imgCertificate },
+  { name: "IBM Data Science Professional Certificate", image: imgCertificate },
+  { name: "Microsoft Certified: Azure Data Scientist Associate", image: imgCertificate },
+  { name: "Tableau Desktop Specialist", image: imgCertificate },
+  { name: "AWS Certified Data Analytics - Specialty", image: imgCertificate },
+  { name: "Certified Analytics Professional (CAP)", image: imgCertificate },
+  { name: "SAS Certified Data Scientist", image: imgCertificate },
+  { name: "Cloudera Certified Associate Data Analyst", image: imgCertificate },
+  { name: "Data Science Council of America (DASCA) Associate Big Data Analyst", image: imgCertificate },
+  { name: "MongoDB Certified Data Analyst Associate", image: imgCertificate },
+  { name: "Alteryx Designer Core Certification", image: imgCertificate },
+  { name: "IABAC Certified Business Analytics Professional", image: imgCertificate }
 ]
 
 const socialLinks = [
@@ -178,7 +181,7 @@ return (
           <div className="flex items-center mb-4 lg:mb-0">
             <div className="mr-6">
               <img
-                src="/placeholder.svg?height=150&width=150"
+                src={imgAvatar}
                 alt="Jane Doe"
                 width={150}
                 height={150}
@@ -245,11 +248,11 @@ return (
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="relative w-full h-48">
+                <div className="relative w-full h-fit">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="rounded-md"
+                    className="rounded-md w-full h-fit"
                   />
                 </div>
                 <CardDescription className="text-[#8b949e]">{project.description}</CardDescription>
@@ -283,11 +286,11 @@ return (
           {certificates.slice(certificatePage * certificatesPerPage, (certificatePage + 1) * certificatesPerPage).map((certificate, index) => (
             <Card key={index} className="bg-[#21262d] border border-[#30363d] hover:border-[#58a6ff] transition-all duration-300">
               <CardContent className="p-4 space-y-4">
-                <div className="relative w-full h-24">
+                <div className="relative w-full h-fit">
                   <img
                     src={certificate.image}
                     alt={certificate.name}
-                    className="rounded-md"
+                    className="rounded-md w-full h-fit"
                   />
                 </div>
                 <p className="text-[#c9d1d9] text-sm">{certificate.name}</p>
