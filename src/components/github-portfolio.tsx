@@ -186,8 +186,8 @@ return (
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-2 text-white">Janric Malate</h2>
-              <h3 className="text-xl text-[#8b949e] mb-4">Data Governance Analyst</h3>
+              <h2 className="text-3xl font-bold mb-2 text-white">Jane Doe</h2>
+              <h3 className="text-xl text-[#8b949e] mb-4">Data Analyst</h3>
               <div className="flex space-x-4">
                 {socialLinks.map((link) => (
                   <a
