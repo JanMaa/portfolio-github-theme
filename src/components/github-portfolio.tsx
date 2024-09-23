@@ -1,15 +1,13 @@
-'use client'
-
 import { useState } from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { BarChart, FileSpreadsheet, Mail, MapPin, Phone, Book, Code, Award, Menu, X, Database, Brain, Eye, Terminal, PieChart, Linkedin, Github, BarChart2, BookOpen, ChevronLeft, ChevronRight, LineChart, Zap, Layers, ShoppingCart, PieChart as PieChartIcon } from "lucide-react"
+import { BarChart, Mail, Book, Code, Award, Menu, X, Database, Brain, Eye, Terminal, PieChart, Linkedin, Github, BarChart2, BookOpen, ChevronLeft, ChevronRight, LineChart, Zap, Layers, ShoppingCart, PieChart as PieChartIcon } from "lucide-react"
 
-export function GithubPortfolio() {
+export default function GitHubInspiredPortfolio() {
 const [activeSection, setActiveSection] = useState('about')
 const [isMenuOpen, setIsMenuOpen] = useState(false)
 const [projectPage, setProjectPage] = useState(0)
@@ -179,7 +177,7 @@ return (
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
           <div className="flex items-center mb-4 lg:mb-0">
             <div className="mr-6">
-              <Image
+              <img
                 src="/placeholder.svg?height=150&width=150"
                 alt="Jane Doe"
                 width={150}
@@ -188,8 +186,8 @@ return (
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-2 text-white">Jane Doe</h2>
-              <h3 className="text-xl text-[#8b949e] mb-4">Data Analyst</h3>
+              <h2 className="text-3xl font-bold mb-2 text-white">Janric Malate</h2>
+              <h3 className="text-xl text-[#8b949e] mb-4">Data Governance Analyst</h3>
               <div className="flex space-x-4">
                 {socialLinks.map((link) => (
                   <a
@@ -206,7 +204,7 @@ return (
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 mt-6 lg:mt-0">
+          <div className="lg:w-2/3 mt-6 lg:mt-6">
             <p className="text-[#8b949e]">
               Passionate data analyst with 5+ years of experience in transforming complex datasets into actionable insights.
               Skilled in statistical analysis, data visualization, and machine learning techniques. I thrive on uncovering
@@ -248,11 +246,9 @@ return (
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="relative w-full h-48">
-                  <Image
+                  <img
                     src={project.image}
                     alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
                     className="rounded-md"
                   />
                 </div>
@@ -288,11 +284,9 @@ return (
             <Card key={index} className="bg-[#21262d] border border-[#30363d] hover:border-[#58a6ff] transition-all duration-300">
               <CardContent className="p-4 space-y-4">
                 <div className="relative w-full h-24">
-                  <Image
+                  <img
                     src={certificate.image}
                     alt={certificate.name}
-                    layout="fill"
-                    objectFit="contain"
                     className="rounded-md"
                   />
                 </div>
@@ -349,7 +343,7 @@ return (
 
     <footer className="bg-[#161b22] border-t border-[#30363d] text-[#8b949e] py-6">
       <div className="container mx-auto px-4 text-center">
-        <p>&copy; 2023 Jane Doe. All rights reserved.</p>
+        <p>&copy; 2024 Jane Doe. All rights reserved.</p>
       </div>
     </footer>
   </div>

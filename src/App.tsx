@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { BarChart, FileSpreadsheet, Mail, MapPin, Phone, Book, Code, Award, Menu, X, Database, Brain, Eye, Terminal, PieChart, Linkedin, Github, BarChart2, BookOpen, ChevronLeft, ChevronRight, LineChart, Zap, Layers, ShoppingCart, PieChart as PieChartIcon } from "lucide-react"
+import { BarChart, Mail, Book, Code, Award, Menu, X, Database, Brain, Eye, Terminal, PieChart, Linkedin, Github, BarChart2, BookOpen, ChevronLeft, ChevronRight, LineChart, Zap, Layers, ShoppingCart, PieChart as PieChartIcon } from "lucide-react"
 
 export default function GitHubInspiredPortfolio() {
 const [activeSection, setActiveSection] = useState('about')
