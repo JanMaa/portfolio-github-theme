@@ -59,7 +59,13 @@ const mobileMenuVariants: Variants = {
   }
 }
 
-function AnimatedSection({children, className, variants = fadeInUp }) {
+interface AnimatedSectionProps {
+  children?: React.ReactNode;
+  className?: string;
+  variants?: Variants;
+}
+
+function AnimatedSection({children, className, variants = fadeInUp }: AnimatedSectionProps ) {
   const controls = useAnimation()
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
